@@ -22,4 +22,18 @@ export class ArticlesComponent implements OnInit {
       .subscribe(articles => this.articles = articles);
   }
 
+  add(title: string, img: string, content: string): void {
+    title = title.trim();
+    if (!title) { return; }
+    this.articleService.addArticle({ title, img, content } as Article)
+      .subscribe(article => {
+        this.articles.push(article);
+      });
+  }
+
+  delete(article: Article): void {
+    this.articles = this.articles.filter(a => a !== article);
+    this.articleService.deleteArticle(article).subscribe();
+  }
+
 }

@@ -9,6 +9,18 @@
             <p>{{article.content}}</p>
           </article>
         </a>
+        
+        <div>
+          <label> <br>
+            <input placeholder="Заголовок:" #articleTitle /> <br> <br>
+            <input placeholder="Ссылка на изображение:" #articleImg /> <br> <br>
+            <input placeholder="Контент:" #articleContent /> <br> <br>
+          </label>
+          <!-- (click) passes input value to add() and then clears the input -->
+          <button (click)="add(articleTitle.value, articleImg.value, articleContent.value); articleTitle.value='';articleImg.value=''; articleContent.value=''; ">
+            Добавить
+          </button>
+        </div>
       </main>
     </div>
 </div>

@@ -33,4 +33,9 @@ export class ArticleDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+   this.articleService.updateArticle(this.article)
+     .subscribe(() => this.goBack());
+  }
+
 }
