@@ -1,0 +1,11 @@
+.module {
+  margin: 10px auto;
+  padding: 15px 0 10px 0;
+  border: 1px solid;
+  border-color: #eee;
+  border-radius: 2px;
+}
+.module:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
