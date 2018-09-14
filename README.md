@@ -1,0 +1,2 @@
+# BerserkBlog
+Welcome to BerserkBlog!
