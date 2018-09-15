@@ -5,11 +5,13 @@
           <h1>{{article.title}}</h1>
         </header>
         <article class="tl_article_content">
-          <img src="{{article.img}}" alt="img">
-          <p>{{article.content}}</p>
+          <img class="my-5" src="{{article.img}}" alt="img">
+          <p class="my-5">{{article.content}}</p>
+          <button class="button publish_button my-5" (click)="goBack()">Вернуться</button>
+          <footer class="my-5">
+            <p>С уважением, команда веб-студии BerserkWeb</p>
+          </footer>
         </article>
-        <button (click)="goBack()">go back</button>
-        <button (click)="save()">save</button>
       </main>
     </div>
 </div>
