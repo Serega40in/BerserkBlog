@@ -1,0 +1,23 @@
+<div class="tl_page_wrap">
+    <div class="tl_page">
+      <main class="tl_article">
+        <header class="tl_article_header">
+        </header>
+        <article class="tl_article_content">
+          <div>
+            <label> <br>
+              <input placeholder="Заголовок:" #articleTitle /> <br> <br>
+              <input placeholder="Ссылка на изображение:" #articleImg /> <br> <br>
+              <input placeholder="Контент:" #articleContent /> <br> <br>
+            </label>
+            <!-- (click) passes input value to add() and then clears the input -->
+            <button (click)="add(articleTitle.value, articleImg.value, articleContent.value); articleTitle.value='';articleImg.value=''; articleContent.value=''; ">
+              Добавить
+            </button>
+          </div>
+        </article>
+        <br>
+        <button (click)="goBack()">go back</button>
+      </main>
+    </div>
+</div>

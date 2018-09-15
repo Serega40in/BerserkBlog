@@ -1,0 +1,223 @@
+@media (min-width: 1450px){
+    .menu_content {
+        width: 500px!important;
+        height: 500px!important;
+    }
+    footer {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    font-size: 
+    }
+    .about {
+        font-size: 1.6em;
+    }
+    .zakaz {
+        font-size: 1.6em;
+        width: 250px;
+        height: 58px;   
+    }
+}
+
+@media (max-width: 992px){
+.logo img {
+    width: 100px;
+    position: relative;
+    top: -25px;
+    left: -25px;
+	}
+.hoja:after, .hoja:before {
+    top: -25px;
+    left: 20px;
+    width: 70%;
+    height: 70%;
+	}
+.contacts {
+    font-size: 1.4em;
+	}
+
+
+                            /*  О НАС */
+
+.title h1 {
+    position: relative;
+    right: 64px;
+    bottom: -100px;
+    font-size: 5em;
+}
+
+}
+@media (max-width: 768px){
+.logo img {
+    width: 75px;
+    top: -50px;
+    }
+.hoja:after, .hoja:before {
+    top: -7px;
+    left: 46px;
+    width: 50%;
+    height: 50%;
+}
+#app {
+/*     margin-bottom: 100px; */
+}
+
+.web-name h1 {
+    font-size: 2.3em;
+	}	
+footer{
+	display: inline-block;
+	position: relative;
+    bottom: -100px; 
+	padding-bottom: 30px;
+	}
+.block-3 {
+    width: 50%;
+    line-height: 20px;
+	}
+.zakaz-btn {
+    position: absolute;
+    right: -12%;
+    top: 0px;
+	}
+.contacts {
+    font-size: 1em;
+    padding-right: 8px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+	}
+.social {
+    font-size: 25px;
+	}
+.page_about .top-text div {
+    margin: 0 auto;
+    }
+.page_about .top-text div p {
+    text-align: left;
+    line-height: 1.3em;
+    }
+.service-detail h2 {
+    font-size: 3.5em;
+    line-height: 1.2em;
+}
+.service-detail p {
+    font-size: 1.6em;
+    line-height: 1.5em;
+}
+
+
+}
+
+@media (max-width: 500px){
+.title h1 {
+    font-size: 4em;
+    }
+.page_about .top-text div h2 {
+    text-align: left;
+}
+.message p {
+    line-height: 1.2em;
+}
+.top-border, .bottom-border{
+    display: none;
+}
+.packages {
+    margin-bottom: 10px;
+}
+.message {
+    margin-top: 10px;
+}
+.promo {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.hoja {
+    left: 100px;
+    }
+.block-3 {
+    width: 90%;
+    line-height: 25px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    }
+.zakaz-btn {
+    position: relative;
+    right: 0;
+    }
+ .zakaz {
+    width: 200px;
+    height: 50px;
+    }
+.contacts {
+    text-align: center;
+    font-size: 1.5em;
+    position: relative; 
+    top: 0px; 
+    }
+.social{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 30px;
+    }
+footer{
+    bottom: 0px; 
+    }
+.close, .forclose:before {
+    left: 320px;
+    top: -70px;
+} 
+.service-detail h2 {
+    font-size: 2.8em;
+    line-height: 1.2em;
+    margin: 50px 10px;
+    word-wrap: break-word;
+}
+.service-detail p {
+    font-size: 1.4em;
+    line-height: 1.3em;
+    margin: 20px 10px;
+}
+.service-detail article {
+    margin-bottom: 35px;
+}
+
+}
+@media (max-width: 450px){
+    .menu_content {
+        width: 289px!important;        
+        font-size: 0.7em;;
+    }
+    .service-detail h2 {
+    word-wrap: break-word;
+    line-height: 1.1em;
+    font-size: 2.6em;
+    margin: 50px 5px;
+    }
+    .service-detail p {
+    margin: 20px 10px;
+    }   
+    .service-detail .price {    
+    margin: 20px 10px;
+    font-size: 1.7em;
+    }
+    .i-name.my_fix_port {
+        height: 400px;
+    }
+    .ps-item-port {  
+        height: 500px;      
+        width: 300px;
+        font-size: 0.7em;
+    }
+    .ps-item-port img {   
+        width: 250px;
+    }
+    .read-more-port {
+        width: 200px;
+        height: 40px;    
+        font-size: 1em;
+    }
+    #port-el img{
+        width: 350px;
+    }
+}

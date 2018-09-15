@@ -11,13 +11,17 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AdminComponent } from './admin/admin.component';
+import { AddComponent } from './admin/add/add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
     ArticleDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

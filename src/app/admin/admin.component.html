@@ -1,0 +1,22 @@
+
+<div class="tl_page_wrap">
+    <div class="tl_page">
+      <main class="tl_article">
+        <header class="tl_article_header">
+          <nav>
+            <a routerLink="/add">Добавить статью</a>
+          </nav>
+        </header>
+        <div *ngFor="let article of articles">
+          <a  routerLink="/detail/{{article.id}}">
+            <article class="tl_article_content module">
+              <h2>{{article.title}}</h2>
+              <p>{{article.content}}</p>
+            </article>
+          </a>
+          <button class="delete" title="delete hero"
+          (click)="delete(hero)">x</button>
+        </div>
+      </main>
+    </div>
+</div>
