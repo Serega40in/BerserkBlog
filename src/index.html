@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self' 'unsafe-inline' 'unsafe-eval'
+        data:
+        blob:
+        wss:
+
+        http://*.google-analytics.com
+        http://*.googletagmanager.com
+
+        https://*.google-analytics.com
+        https://angularexampleapp.com
+        https://*.googletagmanager.com
+        https://*.gstatic.com
+        https://*.googleapis.com
+        https://*.herokuapp.com
+        https://authedmine.com
+        https://api.myjson.com
+        http://berserk-web.ru
+        https://berserk-db.herokuapp.com
+
+        ws://localhost:4200;
+  ">
   <meta charset="utf-8">
   <title>AngularTourOfHeroes</title>
   <base href="/">
@@ -8,8 +31,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="http://berserk-web.ru/blog/css/core.min.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
 </head>
 <body>
   <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

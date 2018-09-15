@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Article } from '../article';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ArticleService }  from '../article.service';
+import { AppConfig } from '../config/app.config';
 
 @Component({
   selector: 'app-article-detail',
@@ -16,6 +17,7 @@ export class ArticleDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
+    private router: Router,
     private location: Location
   ) {}
 

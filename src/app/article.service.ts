@@ -4,6 +4,7 @@ import { Articles } from './mock-articles';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import {AppConfig} from './config/app.config';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -13,8 +14,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class ArticleService {
-
-  private articlesUrl = 'api/articles';
+  articlesUrl: string;
 
   getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>(this.articlesUrl);
@@ -44,6 +44,7 @@ export class ArticleService {
   }
 
   constructor(
-    private http: HttpClient) { }
+    private http: HttpClient) {
+    this.articlesUrl = AppConfig.endpoints.articles; }
 
 }

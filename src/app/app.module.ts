@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import {APP_CONFIG, AppConfig} from './config/app.config';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HttpClientModule }    from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule }    from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,14 +23,11 @@ import { InMemoryDataService }  from './in-memory-data.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-   // and returns simulated server responses.
-   // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
-  providers: [],
+  providers: [
+      {provide: APP_CONFIG, useValue: AppConfig}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

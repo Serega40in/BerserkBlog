@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../article';
 import { ArticleService } from '../article.service';
+import {AppConfig} from '../config/app.config';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -12,7 +14,8 @@ export class DashboardComponent implements OnInit {
 
   articles: Article[] = [];
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private articleService: ArticleService,
+              private router: Router,) { }
 
   ngOnInit() {
     this.getArticles();
