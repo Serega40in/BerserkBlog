@@ -6,15 +6,15 @@
         </header>
         <article class="tl_article_content">
           <div>
-            <label> <br>
-              <form class="" action="index.html" method="post">
+            <label class="form"> <br>
+
                 <input placeholder="Заголовок:" #articleTitle />
                 <input placeholder="Ссылка на изображение:" #articleImg />
                 <textarea placeholder="Контент:" #articleContent ></textarea>
                 <button (click)="add(articleTitle.value, articleImg.value, articleContent.value); articleTitle.value='';articleImg.value=''; articleContent.value=''; ">
                   Добавить
                 </button>
-              </form>
+
             </label>
             <!-- (click) passes input value to add() and then clears the input -->
           </div>

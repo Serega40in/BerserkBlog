@@ -1,24 +1,24 @@
-form {
+.form {
   display: flex;
   flex-direction: column;
 }
 input {
-  min-width: 300px;
+  min-width: 500px;
   max-width: 500px;
   height: 30px;
   margin: 15px auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 textarea {
   margin: auto;
-  font-size: 1.5em;
-  min-width: 300px;
+  font-size: 1.2em;
+  min-width: 500px;
   max-width: 500px;
    min-height: 350px;
    margin: 15px auto;
 }
-form button {
-  min-width: 300px;
+.form button {
+  min-width: 500px;
   max-width: 500px;
   height: 30px;
   margin: 15px auto;
