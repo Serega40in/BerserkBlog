@@ -10,7 +10,7 @@ export const AppConfig: IAppConfig = {
     error404: '404'
   },
   endpoints: {
-    articles: 'https://berserk-db.herokuapp.com/articles'
+    articles: 'https://berserk-db.herokuapp.com/articlestest'
   },
   votesLimit: 3,
   topHeroesLimit: 4,

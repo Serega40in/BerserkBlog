@@ -6,7 +6,7 @@
         </header>
         <article class="tl_article_content">
           <img class="my-5" src="{{article.img}}" alt="img">
-          <p class="my-5">{{article.content}}</p>
+          <p [innerHTML]="article.content"  class="my-5"></p>
           <p>
           <button class="button publish_button my-5" (click)="goBack()">Вернуться</button>
           </p>

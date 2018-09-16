@@ -6,7 +6,8 @@
         <a *ngFor="let article of articles" routerLink="/detail/{{article.id}}">
           <article class="tl_article_content module">
             <h2>{{article.title}}</h2>
-            <p>{{article.content.substring(0, 299)}}... <br> <a href="">Показать полностью...</a></p>            
+            <p [innerHTML]="article.content.substring(0, 287)"></p>
+            <p><a href="">Показать полностью.....</a></p>
           </article>
         </a>
       </main>

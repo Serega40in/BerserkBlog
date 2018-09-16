@@ -4,6 +4,7 @@
       <main class="tl_article">
         <header class="tl_article_header">
           <nav>
+            Админка:
             <a routerLink="/add">Добавить статью</a>
           </nav>
         </header>
@@ -14,8 +15,8 @@
               <p>{{article.content}}</p>
             </article>
           </a>
-          <button class="delete" title="delete hero"
-          (click)="delete(hero)">x</button>
+          <button class="delete" title="delete article"
+          (click)="delete(article)">x</button>
         </div>
       </main>
     </div>

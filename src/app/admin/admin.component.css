@@ -1,0 +1,8 @@
+header {
+  margin: 25px auto!important;
+  border: 1px solid;
+  border-radius: 3px;
+}
+header nav {
+  padding: 10px;
+}
