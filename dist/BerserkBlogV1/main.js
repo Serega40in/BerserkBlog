@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "form {\n  display: flex;\n  flex-direction: column;\n}\ninput {\n  min-width: 300px;\n  max-width: 500px;\n  height: 30px;\n  margin: 15px auto;\n  font-size: 1.5em;\n}\ntextarea {\n  margin: auto;\n  font-size: 1.5em;\n  min-width: 300px;\n  max-width: 500px;\n   min-height: 350px;\n   margin: 15px auto;\n}\nform button {\n  min-width: 300px;\n  max-width: 500px;\n  height: 30px;\n  margin: 15px auto;\n}\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n        </header>\n        <article class=\"tl_article_content\">\n          <div>\n            <label> <br>\n              <input placeholder=\"Заголовок:\" #articleTitle /> <br> <br>\n              <input placeholder=\"Ссылка на изображение:\" #articleImg /> <br> <br>\n              <input placeholder=\"Контент:\" #articleContent /> <br> <br>\n            </label>\n            <!-- (click) passes input value to add() and then clears the input -->\n            <button (click)=\"add(articleTitle.value, articleImg.value, articleContent.value); articleTitle.value='';articleImg.value=''; articleContent.value=''; \">\n              Добавить\n            </button>\n          </div>\n        </article>\n        <br>\n        <button (click)=\"goBack()\">go back</button>\n      </main>\n    </div>\n</div>\n"
+module.exports = "<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n          <h1>Добавление статьи</h1>\n        </header>\n        <article class=\"tl_article_content\">\n          <div>\n            <label> <br>\n              <form class=\"\" action=\"index.html\" method=\"post\">\n                <input placeholder=\"Заголовок:\" #articleTitle />\n                <input placeholder=\"Ссылка на изображение:\" #articleImg />\n                <textarea placeholder=\"Контент:\" #articleContent ></textarea>\n                <button (click)=\"add(articleTitle.value, articleImg.value, articleContent.value); articleTitle.value='';articleImg.value=''; articleContent.value=''; \">\n                  Добавить\n                </button>\n              </form>\n            </label>\n            <!-- (click) passes input value to add() and then clears the input -->\n          </div>\n        </article>\n        <br>\n        <button (click)=\"goBack()\">go back</button>\n      </main>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -128,7 +128,7 @@ var AddComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "header {\n  margin: 25px auto!important;\n  border: 1px solid;\n  border-radius: 3px;\n}\nheader nav {\n  padding: 10px;\n}\n"
 
 /***/ }),
 
@@ -139,7 +139,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n          <nav>\n            <a routerLink=\"/add\">Добавить статью</a>\n          </nav>\n        </header>\n        <div *ngFor=\"let article of articles\">\n          <a  routerLink=\"/detail/{{article.id}}\">\n            <article class=\"tl_article_content module\">\n              <h2>{{article.title}}</h2>\n              <p>{{article.content}}</p>\n            </article>\n          </a>\n          <button class=\"delete\" title=\"delete hero\"\n          (click)=\"delete(hero)\">x</button>\n        </div>\n      </main>\n    </div>\n</div>\n"
+module.exports = "\n<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n          <nav>\n            Админка:\n            <a routerLink=\"/add\">Добавить статью</a>\n          </nav>\n        </header>\n        <div *ngFor=\"let article of articles\">\n          <a  routerLink=\"/detail/{{article.id}}\">\n            <article class=\"tl_article_content module\">\n              <h2>{{article.title}}</h2>\n              <p>{{article.content}}</p>\n            </article>\n          </a>\n          <button class=\"delete\" title=\"delete article\"\n          (click)=\"delete(article)\">x</button>\n        </div>\n      </main>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -416,7 +416,7 @@ module.exports = "h1 {\n  margin: 10px;\n}\n.my-5 {\n  margin: 50px auto;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n          <h1>{{article.title}}</h1>\n        </header>\n        <article class=\"tl_article_content\">\n          <img class=\"my-5\" src=\"{{article.img}}\" alt=\"img\">\n          <p class=\"my-5\">{{article.content}}</p>\n          <p>\n          <button class=\"button publish_button my-5\" (click)=\"goBack()\">Вернуться</button>\n          </p>\n          <footer class=\"my-5\">\n            <p>С уважением, команда веб-студии BerserkWeb</p>\n          </footer>\n        </article>\n      </main>\n    </div>\n</div>\n"
+module.exports = "<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n          <h1>{{article.title}}</h1>\n        </header>\n        <article class=\"tl_article_content\">\n          <img class=\"my-5\" src=\"{{article.img}}\" alt=\"img\">\n          <p [innerHTML]=\"article.content\"  class=\"my-5\"></p>\n          <p>\n          <button class=\"button publish_button my-5\" (click)=\"goBack()\">Вернуться</button>\n          </p>\n          <footer class=\"my-5\">\n            <p>С уважением, команда веб-студии BerserkWeb</p>\n          </footer>\n        </article>\n      </main>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -600,7 +600,7 @@ module.exports = ".module {\n  margin: 10px auto;\n  padding: 15px 0 10px 0;\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n        </header>\n        <a *ngFor=\"let article of articles\" routerLink=\"/detail/{{article.id}}\">\n          <article class=\"tl_article_content module\">\n            <h2>{{article.title}}</h2>\n            <p>{{article.content.substring(0, 299)}}... <br> <a href=\"\">Показать полностью...</a></p>            \n          </article>\n        </a>\n      </main>\n    </div>\n</div>\n"
+module.exports = "<div class=\"tl_page_wrap\">\n    <div class=\"tl_page\">\n      <main class=\"tl_article\">\n        <header class=\"tl_article_header\">\n        </header>\n        <a *ngFor=\"let article of articles\" routerLink=\"/detail/{{article.id}}\">\n          <article class=\"tl_article_content module\">\n            <h2>{{article.title}}</h2>\n            <p [innerHTML]=\"article.content.substring(0, 287)\"></p>\n            <p><a href=\"\">Показать полностью.....</a></p>\n          </article>\n        </a>\n      </main>\n    </div>\n</div>\n"
 
 /***/ }),
 
